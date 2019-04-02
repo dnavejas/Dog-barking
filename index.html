@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <img src="hounddog.jpg" id="dogs" style="height: 400px; width: 400px;"/>
+        <br>
+        <input type="button" value="Speak" style="font-size: 24px;" onclick="hounddog.play()"/>
+        
+
+        <script>
+
+            var hounddog = new Audio("hound_dog.mp3") ;
+
+            hounddog.oncanplaythrough = function(){
+            hounddog.play();
+            }
+           
+            hounddog.loop = false;
+
+            hounddog.addEventListener('ended', function(){
+                    retort.play();
+                });
+                hounddog.play();
+            var retort = new Audio("retort.mp3")
+        </script>
+
+    </body>
+</html>
